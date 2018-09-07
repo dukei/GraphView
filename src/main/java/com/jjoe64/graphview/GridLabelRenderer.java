@@ -16,6 +16,7 @@
  */
 package com.jjoe64.graphview;
 
+import android.annotation.SuppressLint;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -362,6 +363,7 @@ public class GridLabelRenderer {
      * from reading the values of the current
      * theme.
      */
+    @SuppressLint("ResourceType")
     public void resetStyles() {
         // get matching styles from theme
         TypedValue typedValue = new TypedValue();
@@ -552,6 +554,9 @@ public class GridLabelRenderer {
             mLabelVerticalHeight = null;
             mLabelVerticalSecondScaleWidth = null;
             mLabelVerticalSecondScaleHeight = null;
+            mStepsHorizontal = null;
+            mStepsVertical = null;
+            mStepsVerticalSecondScale = null;
         }
         //reloadStyles();
     }
